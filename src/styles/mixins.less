@@ -1,0 +1,24 @@
+/**
+ * 大屏适配 Less 混合函数
+ * 设计稿尺寸：1920 x 1080
+ */
+
+// 设计稿尺寸
+@design-width: 1920;
+@design-height: 1080;
+
+/**
+ * px 转 vw
+ * 用法：.vw(100) 表示设计稿100px转为vw
+ */
+.vw(@px) {
+  @result: (@px / @design-width) * 100vw;
+}
+
+/**
+ * px 转 vh
+ * 用法：.vh(100) 表示设计稿100px转为vh
+ */
+.vh(@px) {
+  @result: (@px / @design-height) * 100vh;
+}

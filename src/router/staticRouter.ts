@@ -8,7 +8,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'dashboard',
-    component: () => import('@/views/dashboard/index.vue'),
+    component: () => import('@/views/dashboard.vue'),
     meta: {
       title: '首页'
     }
@@ -24,5 +24,4 @@ const routes: Array<RouteRecordRaw> = [
 
 ];
 
-
-export default [...routes, ];
+export default [...routes];

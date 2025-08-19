@@ -3,8 +3,6 @@ import type { CustomAxiosRequestConfig, ResultData } from './interface';
 import axios from 'axios';
 import { ResultEnum } from '@/enums/httpEnum';
 
-
-
 const serviceConfig = {
   baseURL: import.meta.env.VITE_API_URL as string,
   timeout: ResultEnum.TIMEOUT as number
@@ -22,9 +20,6 @@ class HttpRequest {
      */
     this.service.interceptors.request.use(
       (config: CustomAxiosRequestConfig) => {
-
-
-
         return config;
       },
       this.errorHandler
@@ -37,13 +32,10 @@ class HttpRequest {
 
     this.service.interceptors.response.use(
       (response: AxiosResponse) => {
-
-
         const { data } = response;
 
         // 全局错误信息拦截（防止下载文件的时候返回数据流，没有 code 直接报错）
         if (data.code && data.code !== ResultEnum.SUCCESS) {
-
           return Promise.reject(data);
         }
         return data;

@@ -36,13 +36,9 @@ const router = createRouter({
 router.beforeEach(async (to) => {
   NProgress.start();
 
-
-
   // 设置页面标题
   const pageTitle = typeof to.meta.title === 'string' ? to.meta.title : 'Default Title';
   document.title = pageTitle;
-
-
 });
 
 router.afterEach(() => {

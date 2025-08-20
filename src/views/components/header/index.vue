@@ -13,25 +13,21 @@
 <style lang="scss" scoped>
 .header {
   width: 100%;
-  height: vh(142);
-  text-align: center;
+  height: 142px;
   font-weight: bold;
   font-size: 50px;
+  text-align: center;
   background-image: url('@/assets/images/header-bg.png');
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   .header-title {
-    background: linear-gradient(
-      0deg,
-      rgba(119, 186, 255, 0.45) 0%,
-      rgba(233, 248, 255, 0.45) 73.3154296875%,
-      rgba(255, 255, 255, 0.45) 100%
-    );
-    opacity: 0.89;
+    font-size: 50px;
+    font-weight: bold;
+    background: linear-gradient(0deg, #77baff 0%, #e9f8ff 73%, #ffffff 100%);
     background-clip: text;
+    opacity: 0.89;
     -webkit-text-fill-color: transparent;
-    font-size: vw(100);
   }
 }
 </style>

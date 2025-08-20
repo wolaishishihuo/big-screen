@@ -3,8 +3,7 @@ import App from '@/App.vue';
 import router from '@/router';
 import pinia from '@/stores';
 import 'virtual:uno.css';
-import '@/styles/app.less';
-import '@/assets/iconfont/iconfont.css';
+import '@/styles/app.scss';
 import '@/utils/rem';
 
 // 创建Vue应用实例

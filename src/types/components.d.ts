@@ -35,6 +35,7 @@ declare module 'vue' {
     VanPullRefresh: typeof import('vant/es')['PullRefresh']
     VanTabbar: typeof import('vant/es')['Tabbar']
     VanTabbarItem: typeof import('vant/es')['TabbarItem']
+    VirtualList: typeof import('./../components/VirtualList/index.vue')['default']
     Waterfull: typeof import('./../components/core/Waterfull/index.vue')['default']
   }
 }

@@ -43,9 +43,9 @@ export default ({ mode }: ConfigEnv): UserConfig => {
     },
     css: {
       preprocessorOptions: {
-        less: {
-          additionalData: '@import "@/styles/mixins.less";', // 全局导入
-          javascriptEnabled: true
+        scss: {
+          additionalData: '@use "@/styles/mixins.scss" as *;', // 全局导入
+          api: 'modern-compiler'
         }
       }
     },

@@ -1,0 +1,24 @@
+/**
+ * 大屏适配 SCSS 混合函数
+ * 设计稿尺寸：1920 x 1080
+ */
+
+// 设计稿尺寸
+$design-width: 1920;
+$design-height: 1080;
+
+/**
+ * px 转 vw 函数
+ * 用法：width: vw(100); 表示设计稿100px转为vw
+ */
+@function vw($px) {
+  @return ($px / $design-width) * 100vw;
+}
+
+/**
+ * px 转 vh 函数
+ * 用法：height: vh(100); 表示设计稿100px转为vh
+ */
+@function vh($px) {
+  @return ($px / $design-height) * 100vh;
+}

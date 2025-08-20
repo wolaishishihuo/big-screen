@@ -8,6 +8,8 @@
   /* iOS滚动条隐藏 */
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none; /* Firefox */
+  margin: 0;
+  padding: 0;
 }
 
 /* 隐藏滚动条 */
@@ -45,26 +47,4 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   overflow: hidden;
-}
-
-/* 处理触摸事件 */
-a,
-button {
-  -webkit-tap-highlight-color: transparent;
-}
-
-:focus {
-  /* 防止在获得焦点时出现边框 */
-  outline: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-/* 表单元素样式 */
-input[type='submit'],
-input[type='reset'],
-input[type='button'],
-input {
-  border: none;
-  outline: none;
-  resize: none;
 }

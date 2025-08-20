@@ -3,7 +3,10 @@
     <div class="card-title">
       {{ title }}
     </div>
-    <div class="card-content">
+    <div
+      v-loading="loading"
+      class="card-content"
+    >
       <slot />
     </div>
   </div>
@@ -12,12 +15,17 @@
 <script setup lang="ts">
 defineProps<{
   title: string;
+  loading?: boolean;
 }>();
 </script>
 
 <style lang="scss" scoped>
 .card {
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   .card-title {
     display: flex;
     align-items: center;
@@ -32,6 +40,12 @@ defineProps<{
   }
   .card-content {
     font-size: 18px;
+    flex: 1;
+    position: relative;
   }
+}
+
+:deep(.el-loading-mask) {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 </style>

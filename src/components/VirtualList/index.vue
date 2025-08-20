@@ -32,7 +32,7 @@ import { delayRef } from '@/utils/base';
 const props = defineProps({
   loading: {
     type: Boolean,
-    required: true
+    required: false
   },
   dataSource: {
     type: Array as PropType<any[]>,

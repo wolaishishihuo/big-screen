@@ -13,6 +13,7 @@ declare module 'vue' {
     Chart: typeof import('./../components/Chart/index.vue')['default']
     ElTree: typeof import('element-plus/es')['ElTree']
     FaceCamera: typeof import('./../components/core/FaceCamera/index.vue')['default']
+    ListHeader: typeof import('./../components/ListHeader/index.vue')['default']
     NavBar: typeof import('./../components/base/NavBar/index.vue')['default']
     PdfViewer: typeof import('./../components/core/PdfViewer/index.vue')['default']
     Popup: typeof import('./../components/core/Popup/index.vue')['default']
@@ -37,6 +38,10 @@ declare module 'vue' {
     VanTabbar: typeof import('vant/es')['Tabbar']
     VanTabbarItem: typeof import('vant/es')['TabbarItem']
     VirtualList: typeof import('./../components/VirtualList/index.vue')['default']
+    VirtualTable: typeof import('./../components/VirtualTable/index.vue')['default']
     Waterfull: typeof import('./../components/core/Waterfull/index.vue')['default']
+  }
+  export interface GlobalDirectives {
+    vLoading: typeof import('element-plus/es')['ElLoadingDirective']
   }
 }
